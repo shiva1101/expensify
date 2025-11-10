@@ -5,9 +5,9 @@ import React from 'react'
   Route,
   Navigate,
  } from "react-router-dom";
- import Login from "./pages/auth/login.jsx";
+import Login from "./pages/auth/Login.jsx";
 //  import Authlayout from "./layouts/Authlayout"; 
- import SignUp from "./pages/auth/SignUp";
+ import SignUp from "./pages/auth/SignUp.jsx";
  import Home from "./pages/auth/Dashboard/Home";
  import Income from "./pages/auth/Dashboard/Income";
  import Expense from "./pages/auth/Dashboard/Expense";

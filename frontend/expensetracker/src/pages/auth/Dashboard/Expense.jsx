@@ -79,7 +79,7 @@ const Expense = () => {
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Expenses</h2>
             <p className="text-sm text-gray-600 mt-1">
-              Total: ${totalExpense.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              Total: ₹{totalExpense.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
             </p>
           </div>
           <button

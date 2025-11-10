@@ -3,9 +3,9 @@ import { CATEGORY_COLORS } from '../utils/constants';
 
 const TransactionCard = ({ transaction, onEdit, onDelete }) => {
   const formatAmount = (num) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
     }).format(num);
   };
 

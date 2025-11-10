@@ -2,9 +2,9 @@ import React from 'react';
 
 const StatCard = ({ title, amount, icon, bgColor = 'bg-white', textColor = 'text-gray-900' }) => {
   const formatAmount = (num) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
     }).format(num);
   };
 

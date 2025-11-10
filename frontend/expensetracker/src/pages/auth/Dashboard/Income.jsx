@@ -79,7 +79,7 @@ const Income = () => {
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Income</h2>
             <p className="text-sm text-gray-600 mt-1">
-              Total: ${totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              Total: ₹{totalIncome.toLocaleString('en-IN', { minimumFractionDigits: 2 })}
             </p>
           </div>
           <button

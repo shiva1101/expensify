@@ -36,7 +36,7 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, transaction, type, catego
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+      <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
         <h2 className="text-xl font-bold mb-4">
           {transaction ? 'Edit' : 'Add'} {type === 'income' ? 'Income' : 'Expense'}
         </h2>
@@ -53,7 +53,7 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, transaction, type, catego
                 required
                 value={formData.amount}
                 onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
 
@@ -65,7 +65,7 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, transaction, type, catego
                 required
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               >
                 <option value="">Select category</option>
                 {categories.map((cat) => (
@@ -83,7 +83,7 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, transaction, type, catego
               <textarea
                 value={formData.description}
                 onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 rows="3"
               />
             </div>
@@ -95,7 +95,7 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, transaction, type, catego
                 required
                 value={formData.date}
                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
           </div>
@@ -110,9 +110,9 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, transaction, type, catego
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90"
+              className="flex-1 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
             >
-              {transaction ? 'Update' : 'Add'}
+              {transaction ? 'Save Changes' : 'Save'}
             </button>
           </div>
         </form>

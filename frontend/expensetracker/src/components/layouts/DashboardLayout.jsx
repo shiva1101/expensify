@@ -22,7 +22,7 @@ const DashboardLayout = ({ children }) => {
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <h1 className="text-2xl font-bold text-primary">Expensify</h1>
+            <h1 className="text-2xl font-bold text-indigo-600">Expensify</h1>
             <button
               onClick={handleLogout}
               className="text-sm text-gray-600 hover:text-gray-900 font-medium"
@@ -42,7 +42,7 @@ const DashboardLayout = ({ children }) => {
               to={item.path}
               className={`px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
                 location.pathname === item.path
-                  ? 'border-primary text-primary'
+                  ? 'border-indigo-600 text-indigo-600'
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
             >
